@@ -1,0 +1,8 @@
+{
+  "name": "Bang Ajiib System AI Generator Progres Update",
+  "description": "Sistem manajemen data personal terenkripsi dengan sinkronisasi otomatis Google Spreadsheet \u0026 Apps Script secara real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

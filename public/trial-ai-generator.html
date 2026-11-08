@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>AI Video Generator Builder By Bang Ajiib</title>
+<style>
+:root{--bg:#0b1220;--panel:#131e30;--panel2:#1b2940;--line:#30415e;--txt:#f4f7fb;--muted:#a9b8cc;--accent:#8b5cf6;--accent2:#22c55e}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top right,#29204c 0,#0b1220 43%);color:var(--txt);font:15px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:22px 15px 48px}
+header{padding:10px 0 22px} .eyebrow{color:#c4b5fd;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(27px,5vw,42px);line-height:1.1;margin:8px 0}
+.lead{color:var(--muted);max-width:760px}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.panel{background:#131e30f2;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 15px 40px #0003}
+h2{font-size:18px;margin:0 0 12px}
+label{display:block;font-weight:700;font-size:13px;margin:12px 0 5px;color:#dce6f5}
+input,select,textarea{width:100%;border:1px solid #3a4c6b;background:#0b1526;color:var(--txt);border-radius:9px;padding:10px 11px;font:inherit}
+textarea{min-height:70px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hint{font-size:12px;color:var(--muted);margin-top:5px}
+button{border:0;border-radius:9px;padding:11px 14px;font-weight:800;cursor:pointer;font-size:14px}
+.primary{background:linear-gradient(100deg,#8b5cf6,#6366f1);color:white}
+.secondary{background:#263650;color:#eef4ff;border:1px solid #405271}
+.green{background:#166534;color:#dcfce7}
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.output{white-space:pre-wrap;background:#091322;border:1px solid #2d3d58;border-radius:10px;padding:13px;min-height:260px;color:#e7eefb;font-size:13px}
+.note{background:#2b2414;border:1px solid #6b5120;color:#fde68a;padding:10px;border-radius:9px;font-size:12px;margin-top:12px}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
+@media(max-width:780px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="eyebrow">Creative tool · AI video</div>
+<h1>AI Video Generator Builder By Bang Ajiib</h1>
+<p class="lead">Pilih opsi, isi detail penting, lalu buat brief siap kirim ke ChatGPT untuk menghasilkan storyboard serta judul, deskripsi, dan tepat 5 hashtag siap upload.</p>
+</header>
+<main class="layout">
+<section class="panel">
+<h2>1. Pilih konsep video</h2>
+<form id="briefForm" novalidate>
+<label>Judul / nama produk atau program</label>
+<input id="title" placeholder="Contoh: AI Prompt Generator">
+<div class="grid">
+<div><label>Jenis konten</label><select id="type"><option>Promosi Produk</option><option>Affiliate Product Showcase</option><option>Promosi Program / Aplikasi AI</option><option>Edukasi</option><option>Personal Branding</option><option>Review Produk</option><option>Lainnya</option></select></div>
+<div><label>Tujuan video</label><select id="goal"><option>Memperkenalkan</option><option>Menjual</option><option>Mengajak menggunakan</option><option>Meningkatkan branding</option><option>Mengedukasi</option></select></div>
+<div><label>Platform</label><select id="platform"><option>TikTok</option><option>Instagram Reels</option><option>YouTube Shorts</option><option>Semua platform video pendek</option><option>YouTube</option></select></div>
+<div><label>Target audiens</label><select id="audience"><option>Umum</option><option>Remaja</option><option>Pelajar dan mahasiswa</option><option>Kreator konten</option><option>Affiliate marketer</option><option>Pebisnis / UMKM</option><option>Pekerja profesional</option></select></div>
+<div><label>Jumlah scene</label><select id="scenes"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option></select></div>
+<div><label>Durasi per scene</label><select id="duration"><option>5 detik</option><option selected>10 detik</option><option>15 detik</option></select></div>
+<div><label>Gaya visual</label><select id="visual"><option>Realistic 3D cinematic</option><option>Realistic human / live action</option><option>Futuristic AI technology</option><option>Animasi 3D</option><option>Commercial product cinematic</option><option>UGC / konten kreator natural</option><option>Anime</option></select></div>
+<div><label>Gaya promosi</label><select id="promo"><option>Persuasif dan profesional</option><option>Dramatis dan emosional</option><option>Santai dan natural</option><option>Komedi dan menghibur</option><option>Enerjik dan viral</option><option>Mewah / premium</option></select></div>
+<div><label>Jenis hook</label><select id="hook"><option>Hook mengejutkan</option><option>Pertanyaan yang memancing rasa penasaran</option><option>Masalah yang sering dialami</option><option>Fakta atau angka menarik</option><option>Before-after</option><option>Visual yang tidak terduga</option></select></div>
+<div><label>Gaya voice over</label><select id="voice"><option>Natural dan komunikatif</option><option>Energik dan antusias</option><option>Profesional dan meyakinkan</option><option>Santai seperti teman</option><option>Dramatis dan emosional</option></select></div>
+<div><label>AI video generator</label><select id="generator"><option>Fleksibel untuk berbagai AI video</option><option>Kling AI</option><option>Google Veo</option><option>Runway</option><option>Hailuo AI</option><option>Seedance</option><option>Lainnya</option></select></div>
+<div><label>Rasio video</label><select id="ratio"><option>9:16 vertikal</option><option>16:9 horizontal</option><option>1:1 persegi</option></select></div>
+</div>
+<label>Gaya karakter</label><select id="character"><option>Gunakan karakter yang sama di semua scene</option><option>Tanpa karakter manusia, fokus produk</option><option>Karakter berbeda sesuai scene</option><option>Gunakan foto karakter referensi yang saya upload</option></select>
+<label>Foto referensi</label><select id="reference"><option>Foto produk dan foto karakter</option><option>Foto produk saja</option><option>Foto karakter saja</option><option>Tanpa foto referensi</option><option>Akan saya jelaskan kemudian</option></select>
+<label>Musik dan efek suara</label><select id="audio"><option>BGM dan SFX sesuai setiap scene</option><option>BGM saja</option><option>SFX saja</option><option>Tanpa audio</option></select>
+<label>Detail CTA / ajakan</label>
+<select id="cta">
+<option>Klik keranjang kuning sekarang juga dan mulai rasakan bedanya hari ini</option>
+<option>Jangan biarkan kesempatan ini lewat, coba sekarang melalui keranjang kuning</option>
+<option>Berhenti menunda, ambil langkah pertamamu sekarang juga</option>
+<option>Ingin hasil yang berbeda? Mulai dari sini, klik keranjang kuning</option>
+<option>Dapatkan aksesnya sekarang sebelum kamu menyesal melewatkannya</option>
+<option>Ribuan orang sudah memulainya, sekarang giliranmu. Cek keranjang kuning</option>
+<option>Investasi terbaik untuk dirimu adalah yang kamu lakukan hari ini</option>
+<option>Amankan pesananmu sekarang juga, prosesnya cepat dan mudah</option>
+<option>Komentar "MAU" di bawah video ini dan detailnya kami kirim sekarang juga</option>
+<option>Simpan video ini, lalu beli sekarang sebelum kamu lupa</option>
+<option>Tidak perlu menunggu momen sempurna, mulai sekarang lewat keranjang kuning</option>
+<option>Pilih paket yang paling cocok untukmu dan rasakan manfaatnya hari ini</option>
+<option>Kamu sudah tahu masalahnya, sekarang saatnya solusinya. Klik keranjang kuning</option>
+<option>Jangan jadi yang tertinggal, ikut bergabung sekarang juga</option>
+<option>Coba sekarang, pilihannya ada di tanganmu. Klik keranjang kuning</option>
+<option>Lihat sendiri bedanya, klik keranjang kuning dan mulai hari ini</option>
+<option>Hadiahi dirimu sendiri dengan solusi yang sudah lama kamu tunggu</option>
+<option>Tag temanmu yang membutuhkan ini, lalu dapatkan aksesnya sekarang</option>
+<option>Ambil keputusan hari ini, jangan sampai kamu menyesal esok hari</option>
+<option>Klik sekarang, mulai perubahanmu, dan jadilah versi terbaik dirimu</option>
+</select>
+<div class="hint">Pilih salah satu CTA di atas. Pastikan CTA sesuai dengan fakta produk agar tidak menyesatkan audiens.</div>
+<label>Informasi tambahan yang wajib masuk</label><textarea id="extra" placeholder="Fitur, harga, manfaat, cara kerja, batasan, atau detail lain..."></textarea>
+<label>Hal yang tidak boleh muncul / diklaim</label><textarea id="avoid" placeholder="Contoh: Jangan mengarang fitur, harga, hasil, atau testimoni."></textarea>
+<div class="btns">
+<button class="primary" id="generateBtn" type="button">Buat brief saya</button>
+<button class="secondary" type="reset">Reset</button>
+</div>
+</form>
+</section>
+<section class="panel" id="outputPanel">
+<h2>2. Brief siap dikirim</h2>
+<p class="hint">Setelah dibuat, salin teks ini dan kirim ke ChatGPT. ChatGPT akan membuat storyboard dengan format ringkas yang kamu inginkan.</p>
+<div id="output" class="output">Hasil brief akan muncul di sini setelah kamu memilih opsi dan menekan “Buat brief saya”.</div>
+<div class="btns">
+<button class="green" id="copy" type="button">Salin brief</button>
+<button class="secondary" id="download" type="button">Unduh TXT</button>
+</div>
+<div class="note">Tips: Untuk hasil paling akurat, sertakan foto produk/karakter dan pastikan detail fitur serta klaim sesuai kenyataan.</div>
+</section>
+</main>
+<footer>AI Video Generator Builder By Bang Ajiib · Satu file HTML · Bisa digunakan di browser HP atau komputer</footer>
+</div>
+<script>
+const form=document.getElementById('briefForm'), output=document.getElementById('output'), generateBtn=document.getElementById('generateBtn'), outputPanel=document.getElementById('outputPanel');
+const val=id=>document.getElementById(id).value.trim();
+function makeBrief(){
+ const total=Number(val('scenes'))*Number(val('duration').split(' ')[0]);
+ const lines=[
+'Bertindaklah sebagai Scriptwriter, Creative Director, dan Video Director profesional untuk video AI.',
+'Buat storyboard dan prompt produksi video berdasarkan brief berikut.',
+'',
+'INFORMASI PROYEK',
+'Judul: '+val('title'),
+'Jenis konten: '+val('type'),
+'Tujuan: '+val('goal'),
+'Platform: '+val('platform'),
+'Target audiens: '+val('audience'),
+'Jumlah scene: '+val('scenes'),
+'Durasi per scene: '+val('duration'),
+'Perkiraan durasi total: '+total+' detik',
+'AI video generator: '+val('generator'),
+'Rasio: '+val('ratio'),
+'',
+'ARAHAN KREATIF',
+'Gaya visual: '+val('visual'),
+'Gaya promosi: '+val('promo'),
+'Jenis hook: '+val('hook'),
+'Gaya voice over: '+val('voice'),
+'Karakter: '+val('character'),
+'Referensi: '+val('reference'),
+'Audio: '+val('audio'),
+'CTA: '+(val('cta')||'Buat CTA yang jelas dan sesuai tujuan video.'),
+'Informasi tambahan: '+(val('extra')||'Tidak ada detail tambahan.'),
+'Hal yang harus dihindari: '+(val('avoid')||'Jangan mengarang spesifikasi, fitur, harga, testimoni, atau klaim.'),
+'',
+'INSTRUKSI OUTPUT WAJIB',
+'Buat '+val('scenes')+' scene sesuai durasi yang ditentukan.',
+'Scene pertama harus memiliki HOOK sangat kuat, terutama pada 3 detik pertama.',
+'Scene tengah harus menjelaskan masalah, solusi, manfaat, atau demonstrasi secara runtut dan menarik.',
+'Scene terakhir harus memiliki CTA yang jelas dan persuasif, gunakan CTA yang sudah ditentukan di atas.',
+'Jaga konsistensi karakter, produk, lokasi, pencahayaan, dan gaya visual antar-scene jika relevan.',
+'Voice over harus natural, mudah diucapkan, dan sesuai durasi.',
+'Jika informasi belum tersedia, jangan mengarang. Gunakan asumsi minimal atau tanyakan satu hal yang paling penting.',
+'',
+'FORMAT JAWABAN:',
+'BAGIAN A — STORYBOARD:',
+'Untuk SETIAP scene, berikan HANYA lima bagian berikut:',
+'1. Judul Scene',
+'2. Ide Visual (adegan, karakter, aktivitas, gerakan kamera, transisi)',
+'3. Voice Over',
+'4. Teks Layar',
+'5. Audio (BGM dan SFX)',
+'',
+'BAGIAN B — KONTEN SIAP UPLOAD:',
+'Setelah seluruh scene selesai, sertakan juga:',
+'1. Judul video: menarik, relevan, dan membuat orang penasaran.',
+'2. Deskripsi/caption: ringkas, persuasif, sesuai isi video, dan memiliki ajakan bertindak bila relevan.',
+'3. Tepat 5 hashtag: relevan dengan topik, produk/program, dan platform. Jangan kurang atau lebih dari 5.',
+'Pastikan judul, deskripsi, dan hashtag siap disalin untuk diunggah. Jangan mengarang fakta, fitur, harga, atau klaim.',
+'',
+'Jangan sertakan gambar/foto atau penjelasan panjang di luar format di atas. Langsung berikan hasil yang siap diproduksi dan diunggah.'
+ ];
+ output.textContent=lines.join('\n');
+ if(window.innerWidth<=780&&outputPanel){outputPanel.scrollIntoView({behavior:'smooth',block:'start'})}
+}
+form.addEventListener('submit',e=>{e.preventDefault();makeBrief()});
+generateBtn.addEventListener('click',e=>{e.preventDefault();makeBrief()});
+document.getElementById('copy').addEventListener('click',async()=>{
+ if(output.textContent.startsWith('Hasil brief')){makeBrief()}
+ try{await navigator.clipboard.writeText(output.textContent);document.getElementById('copy').textContent='Tersalin ✓';setTimeout(()=>document.getElementById('copy').textContent='Salin brief',1400)}
+ catch(e){const t=document.createElement('textarea');t.value=output.textContent;document.body.append(t);t.select();document.execCommand('copy');t.remove();document.getElementById('copy').textContent='Tersalin ✓'}
+});
+document.getElementById('download').addEventListener('click',()=>{
+ if(output.textContent.startsWith('Hasil brief'))makeBrief();
+ const blob=new Blob([output.textContent],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='brief-video-ai.txt';a.click();URL.revokeObjectURL(url);
+});
+form.addEventListener('reset',()=>setTimeout(()=>{output.textContent='Hasil brief akan muncul di sini setelah kamu memilih opsi dan menekan “Buat brief saya”.'},0));
+</script>
+</body>
+</html>

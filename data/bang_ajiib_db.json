@@ -1,0 +1,161 @@
+{
+  "users": [
+    {
+      "id": "USR-002",
+      "email": "databasetcman@gmail.com",
+      "name": "databasetcman",
+      "password": "Superadmin-AJIIB",
+      "role": "admin",
+      "status": "Aktif & Terverifikasi",
+      "menuAccess": "both",
+      "department": "-",
+      "position": "Admin",
+      "nik": "-",
+      "phone": "-",
+      "address": "-",
+      "personalNotes": "-",
+      "securityClearance": "Otoritas Admin",
+      "joinedAt": "2026-11-03T10:06:25.977Z",
+      "lastLoginAt": "2026-11-05T07:49:30.072Z",
+      "lastSyncedAt": "2026-11-03T10:06:25.977Z",
+      "syncVersion": 1,
+      "encryptedVault": {
+        "passwordCipher": "AES256GCM$843bc2b30dd1e5444d67524b$1c1f14c35bd11c3f7b0a13653c916203$7e9f03c68f77517a",
+        "nikCipher": "AES256GCM$6b838943a5e5865ac7ac52ac$44$5c35323a44c92af7",
+        "phoneCipher": "AES256GCM$6b838943a5e5865ac7ac52ac$44$5c35323a44c92af7",
+        "addressCipher": "AES256GCM$6b838943a5e5865ac7ac52ac$44$5c35323a44c92af7",
+        "notesCipher": "AES256GCM$6b838943a5e5865ac7ac52ac$44$5c35323a44c92af7",
+        "keyFingerprint": "BC19-480A-9C8D-2DA2",
+        "algorithm": "AES-256-GCM"
+      }
+    },
+    {
+      "id": "USR-003",
+      "email": "syahroturosita@gmail.com",
+      "name": "Syahrotu Rosita",
+      "password": "USER-NADQ45YJ-GIPQ",
+      "role": "user",
+      "status": "Aktif & Terverifikasi",
+      "menuAccess": "fashion",
+      "department": "-",
+      "position": "User",
+      "nik": "-",
+      "phone": "-",
+      "address": "-",
+      "personalNotes": "-",
+      "securityClearance": "Akses Personal Terisolasi",
+      "joinedAt": "2026-11-03T10:15:51.594Z",
+      "lastLoginAt": "2026-11-05T07:49:27.507Z",
+      "lastSyncedAt": "2026-11-03T10:15:51.594Z",
+      "syncVersion": 1,
+      "encryptedVault": {
+        "passwordCipher": "AES256GCM$12fe31dc69774c332a8d9b07$fe6fe4eb970d3556b273b72495a91424a9c5$0d4996c5c6a6b726",
+        "nikCipher": "AES256GCM$3f68d19df20fc5a1ac3f59a1$52$1a4db554ee8da8a3",
+        "phoneCipher": "AES256GCM$3f68d19df20fc5a1ac3f59a1$52$1a4db554ee8da8a3",
+        "addressCipher": "AES256GCM$3f68d19df20fc5a1ac3f59a1$52$1a4db554ee8da8a3",
+        "notesCipher": "AES256GCM$3f68d19df20fc5a1ac3f59a1$52$1a4db554ee8da8a3",
+        "keyFingerprint": "BB03-6FDD-A58A-4CFC",
+        "algorithm": "AES-256-GCM"
+      }
+    },
+    {
+      "id": "USR-004",
+      "email": "umianis89@gmail.com",
+      "name": "Anis Nurfadilah",
+      "password": "USER-NADQ45YJ-GIPQ",
+      "role": "user",
+      "status": "Aktif & Terverifikasi",
+      "menuAccess": "both",
+      "department": "-",
+      "position": "User",
+      "nik": "-",
+      "phone": "-",
+      "address": "-",
+      "personalNotes": "-",
+      "securityClearance": "Akses Personal Terisolasi",
+      "joinedAt": "2026-11-03T10:06:25.977Z",
+      "lastLoginAt": "2026-11-05T07:49:27.507Z",
+      "lastSyncedAt": "2026-11-03T10:06:25.977Z",
+      "syncVersion": 1,
+      "encryptedVault": {
+        "passwordCipher": "AES256GCM$69f1a08411c4dd6b67fd2593$006069df3f72f0ff27e8f953f30f2ccc6e6b$6524dc4fe947a382",
+        "nikCipher": "AES256GCM$a3e19f26321e5d7e9c102b94$ac$7dc828e98ec5db66",
+        "phoneCipher": "AES256GCM$a3e19f26321e5d7e9c102b94$ac$7dc828e98ec5db66",
+        "addressCipher": "AES256GCM$a3e19f26321e5d7e9c102b94$ac$7dc828e98ec5db66",
+        "notesCipher": "AES256GCM$a3e19f26321e5d7e9c102b94$ac$7dc828e98ec5db66",
+        "keyFingerprint": "8F00-661C-7FF7-CE76",
+        "algorithm": "AES-256-GCM"
+      }
+    },
+    {
+      "id": "USR-005",
+      "email": "bangajiib88@gmail.com",
+      "name": "Mochamad Najib",
+      "password": "USER-NADQ45YJ-GIPQ",
+      "role": "user",
+      "status": "Aktif & Terverifikasi",
+      "menuAccess": "both",
+      "department": "-",
+      "position": "User",
+      "nik": "-",
+      "phone": "-",
+      "address": "-",
+      "personalNotes": "-",
+      "securityClearance": "Akses Personal Terisolasi",
+      "joinedAt": "2026-11-03T10:06:25.977Z",
+      "lastLoginAt": "2026-11-05T07:49:27.507Z",
+      "lastSyncedAt": "2026-11-03T10:06:25.977Z",
+      "syncVersion": 1,
+      "encryptedVault": {
+        "passwordCipher": "AES256GCM$70f1a246d8ec924771957038$c2005bce0e8d47c1bd6ceb60c88c02339184$f9080d056d4e5a40",
+        "nikCipher": "AES256GCM$0a6fa574b8daec61f86cdeb2$a7$0f5db7327b224f64",
+        "phoneCipher": "AES256GCM$0a6fa574b8daec61f86cdeb2$a7$0f5db7327b224f64",
+        "addressCipher": "AES256GCM$0a6fa574b8daec61f86cdeb2$a7$0f5db7327b224f64",
+        "notesCipher": "AES256GCM$0a6fa574b8daec61f86cdeb2$a7$0f5db7327b224f64",
+        "keyFingerprint": "D78F-D4CC-A8BD-4E01",
+        "algorithm": "AES-256-GCM"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "url": "https://share.gemini.google/ygsvc4rCvQcg"
+    },
+    {
+      "id": "ai_generator",
+      "name": "AI Generator Affiliate",
+      "url": "https://share.gemini.google/U9Q5kNPeWCoa"
+    },
+    {
+      "id": "menu_ai_generator_animation_dk98",
+      "name": "AI Generator Animation",
+      "url": "https://share.gemini.google/5JpgfpEDIT3c"
+    },
+    {
+      "id": "trial_ai_generator",
+      "name": "Trial AI Generator",
+      "url": "/trial-ai-generator.html"
+    },
+    {
+      "id": "materi",
+      "name": "Materi",
+      "url": "/materi",
+      "materiModules": []
+    }
+  ],
+  "deletedEmails": [],
+  "activities": [],
+  "telemetry": {
+    "lastSyncTime": "2026-11-08T02:02:16.299Z",
+    "syncState": "Terhubung & Sinkron",
+    "spreadsheetId": "1_ImJ32kF3PfKdg9iTfO187a2Xbb8CzW36mJLdfS7QB0",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1_ImJ32kF3PfKdg9iTfO187a2Xbb8CzW36mJLdfS7QB0/edit?usp=sharing",
+    "appsScriptUrl": "https://script.google.com/macros/s/AKfycbzFxIRgm2CYI1zON5exZgTwu0s5-2sBPU5GydQ1voJvscnpsrgS0OqvqtC5Vq82XMs3/exec",
+    "totalSyncCycles": 52,
+    "autoSyncIntervalSec": 15,
+    "sheetRowsDetected": 4,
+    "appsScriptStatus": "Sheet DataUser Tersinkronisasi (OK)"
+  }
+}
